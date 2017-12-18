@@ -177,7 +177,7 @@ RE.setBlockquote = function() {
 }
 
 RE.insertImage = function(url, alt) {
-    var html = '<img src="' + url + '" alt="' + alt + '" width = "50" height = "50"/>';
+    var html = '<img src="' + url + '" alt="' + alt + '" width = "50" height = "50"/> &nbsp;<br>';
     RE.insertHTML(html);
 }
 
@@ -187,14 +187,14 @@ RE.insertVideo = function(url) {
                     '<object data="' + url + '" width="320" height="240">'+
                         '<embed src="' + url + '" width="320" height="240" />'+
                     '</object>'+
-                '</video>';
+                '</video>&nbsp;<br><br>';
     RE.insertHTML(html);
 }
 RE.insertAudio = function(url) {
     var html = '<audio controls="controls" height="100" width="100">'+
                     '<source src="' + url + '" type="audio/mp3" />'+
          '<embed height="100" width="100" src="' + url + '" ></embed>'+
-                    '</audio>';
+                    '</audio>&nbsp;<br><br>';
     RE.insertHTML(html);
 }
 

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HRichEditor.iml" filepath="$PROJECT_DIR$/HRichEditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HRichEdit.iml" filepath="$PROJECT_DIR$/.idea/HRichEdit.iml" />
+      <module fileurl="file://E:\workspace\HRichEdit\HRichEditor.iml" filepath="E:\workspace\HRichEdit\HRichEditor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\HRichEdit\app\app.iml" filepath="E:\workspace\HRichEdit\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/hricheditor/hricheditor.iml" filepath="$PROJECT_DIR$/hricheditor/hricheditor.iml" />
+      <module fileurl="file://E:\workspace\HRichEdit\hricheditor\hricheditor.iml" filepath="E:\workspace\HRichEdit\hricheditor\hricheditor.iml" />
     </modules>
   </component>
 </project>

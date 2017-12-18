@@ -11,6 +11,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -86,10 +87,16 @@ public class HRichEditor extends WebView {
         setVerticalScrollBarEnabled(false);
         setHorizontalScrollBarEnabled(false);
         getSettings().setJavaScriptEnabled(true);
+        //缩放操作
+        getSettings().setSupportZoom(false); //支持缩放，默认为true。是下面那个的前提。
+        getSettings().setBuiltInZoomControls(true); //设置内置的缩放控件。若为false，则该WebView不可缩放
+        getSettings().setDisplayZoomControls(false); //隐藏原生的缩放控件
+
+        getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);//支持内容重新布局
         setWebChromeClient(new WebChromeClient());
         setWebViewClient(createWebviewClient());
         loadUrl(SETUP_HTML);
-
+        this.requestDisallowInterceptTouchEvent(true);//解决ScrollView嵌套WebView冲突问题
         applyAttributes(context, attrs);
     }
 
