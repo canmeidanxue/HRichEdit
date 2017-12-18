@@ -182,19 +182,24 @@ RE.insertImage = function(url, alt) {
 }
 
 RE.insertVideo = function(url) {
-    var html = '<video width="320" height="240" controls="controls">'+
-                    '<source src="' + url + '" type="video/mp4" />'+
-                    '<object data="' + url + '" width="320" height="240">'+
-                        '<embed src="' + url + '" width="320" height="240" />'+
-                    '</object>'+
-                '</video>&nbsp;<br><br>';
+//    var html = '<video width="100%" height="100%" controls="controls">'+
+//                    '<source src="' + url + '" type="video/mp4" />'+
+//                    '<object data="' + url + '" width="100%" height="100%">'+
+//                        '<embed src="' + url + '" width="100%" height="100%" />'+
+//                    '</object>'+
+//                '</video>&nbsp;<br><br>';
+    var html = '<iframe width="100%%" height="100%" frameborder="0" src="'+url+'" allowfullscreen=""></>';
     RE.insertHTML(html);
 }
 RE.insertAudio = function(url) {
-    var html = '<audio controls="controls" height="100" width="100">'+
+//    var html = '<audio controls="controls" height="100%" width="100%">'+
+//                    '<source src="' + url + '" type="audio/mp3" />'+
+//         '<embed height="100" width="100" src="' + url + '" ></embed>'+
+//                    '</audio>&nbsp;<br><br>';
+    var html = '<audio controls="controls" height="100%" width="100%">'+
                     '<source src="' + url + '" type="audio/mp3" />'+
          '<embed height="100" width="100" src="' + url + '" ></embed>'+
-                    '</audio>&nbsp;<br><br>';
+                    '</audio>';
     RE.insertHTML(html);
 }
 
